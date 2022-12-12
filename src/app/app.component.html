@@ -1,0 +1,18 @@
+ <div class="background-header"></div>
+<div class="background-body"></div>
+<div class="chatContainer">
+   <app-sidebar (coversationClicked)="onConversationSelected($event)"></app-sidebar>
+    <div id="chat">
+        <div id="chatPlaceholder" *ngIf="!conversation">
+            <img width="600px" src="../assets/no-chat.jpg" alt="">
+        </div>
+
+        <app-chat *ngIf="conversation">
+       
+        </app-chat>
+    </div>
+</div>
+
+<router-outlet></router-outlet> 
+
+ 

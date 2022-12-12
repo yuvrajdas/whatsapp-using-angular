@@ -1,0 +1,42 @@
+<div id="sidebar">
+    <div id="row1">
+
+        <div id="sidebarHeader">
+            <div class="avtarContainer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png" alt="">
+            </div>
+            <div class="actionsContainer"> 
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 512"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="#919191" d="M64 360c30.9 0 56 25.1 56 56s-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56zm0-160c30.9 0 56 25.1 56 56s-25.1 56-56 56s-56-25.1-56-56s25.1-56 56-56zM120 96c0 30.9-25.1 56-56 56S8 126.9 8 96S33.1 40 64 40s56 25.1 56 56z"/></svg>
+                </div>
+            </div>
+        </div>
+        
+        <div id="searchBox">
+            <span class="material-symbols-outlined searchIcon">
+                search
+            </span>
+            <input type="text" placeholder="Search or start new chat">
+        </div>
+    </div>
+   
+    <div id="sidebarContent">
+        <!-- <div id="noConversation">
+            All chat list
+        </div> -->
+
+        <div class="conversation" *ngFor="let conversation of conversations" (click)="coversationClicked.emit(conversation)">
+            <div class="picture"> 
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png" >
+            </div>
+            <div class="content">
+                <div class="converSationHeader">
+                    <div class="name">{{conversation.name}}</div>
+                    <div class="time">{{conversation.time}}</div>
+                </div>
+                <div class="message">{{conversation.message}}</div>
+            </div>
+        </div>
+ 
+    </div>
+</div>
