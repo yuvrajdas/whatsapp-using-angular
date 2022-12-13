@@ -10,10 +10,16 @@ export class ChatComponent implements OnInit {
   constructor() { }
 @Input() conversation:any;
 
+  message!:string;
+  user!:any;
   ngOnInit(): void {
-    console.log(this.conversation);
+    this.user = prompt()
+
+    // console.log(this.conversation);
   }
-  submitMessage(){
+  sendMessage(){
+    let res= this.conversation.push(this.message)
+    console.log(res);
     
   }
 }

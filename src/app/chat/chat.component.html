@@ -29,7 +29,7 @@
             </svg>
         </div>
         <div id="textarea">
-            <input type="text" (keyup.enter)="submitMessage()"> 
+            <input type="text" [(ngModel)]="message"  (keyup.enter)="sendMessage()"> 
         </div>
         <div id="micIcon">
             <div id="sendButton">
