@@ -1,1 +1,43 @@
-<p>chat works!</p>
+<div id="container">
+    <div id="header">
+        <div class="avatarSection">
+            <div class="picture">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/2048px-Default_pfp.svg.png" alt="">
+            </div>
+            <div class="nameSection"> <span>Unknown</span> 
+                <small>Typing....</small>
+            </div>
+            
+        </div>
+        <div class="actionButton">
+            <img src="assets/dots.png" alt="">
+        </div>
+    </div>
+    <div id="body">
+        <div class="message" [ngClass]="{'me' : message.me}" *ngFor="let message of conversation.messages">
+           <div class="messageContent">
+            {{message.body}} 
+            <div class="time">{{message.time}}</div>
+           </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="smileyIcon">
+            <!-- <img src="assets/happy-icon.svg" alt="" srcset=""> -->
+            <svg style="width: 40px;height: 40px;">
+                <use href="assets/happy-icon.svg#happy-icon"></use>
+            </svg>
+        </div>
+        <div id="textarea">
+            <input type="text" (keyup.enter)="submitMessage()"> 
+        </div>
+        <div id="micIcon">
+            <div id="sendButton">
+                <svg style="width: 40px;height: 40px;">
+                    <use href="assets/sent-icon.svg#sent-icon"></use>
+                </svg>
+            </div>
+           
+        </div>
+    </div>
+</div>

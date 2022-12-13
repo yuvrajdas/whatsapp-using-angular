@@ -7,7 +7,7 @@
             <img width="600px" src="../assets/no-chat.jpg" alt="">
         </div>
 
-        <app-chat *ngIf="conversation">
+        <app-chat [conversation]="conversation" *ngIf="conversation">
        
         </app-chat>
     </div>
