@@ -10,13 +10,14 @@ export class AppComponent implements OnInit {
   
   constructor(http:SocketService){}
   
+  user:any;
   ngOnInit(): void {
     
-   
+    this.user = prompt()
   }
   conversation!: any;
   onConversationSelected(conversation:any) {
-    console.log(conversation);
+    // console.log(conversation);
     this.conversation = conversation;
   }
 }
